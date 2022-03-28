@@ -1,0 +1,233 @@
+.toplevel_page_nfl-wp-settings {
+    #wpwrap {
+        background: #eaecf6;
+    }
+
+    small {
+        font-size: 12px;
+    }
+
+    #toplevel_page_nfl-wp-settings {
+
+        .wp-menu-image img {
+            padding-top: 4px !important;
+        }
+
+        &.current {
+            .wp-menu-image img {
+                opacity: 1;
+            }
+
+            a.menu-top {
+                background: #154072 !important;
+            }
+        }
+    }
+
+    #nfl-wp-wrap {
+        padding: 40px;
+
+        .nfl-wp-page-content {
+            max-width: 720px;
+            margin-right: auto;
+            width: 100%;
+
+            h2 {
+                font-size: 16px;
+                color: #242832;
+                margin: 0;
+                margin-bottom: 6px;
+                font-weight: 500;
+            }
+
+            h4 {
+                color: #7B809F;
+                margin: 0;
+                margin-bottom: 18px;
+                font-weight: 500;
+            }
+
+            .content-card {
+                // height: 200px;
+                background: #fff;
+                border-radius: 6px;
+                box-sizing: border-box;
+                box-shadow: 0 3px 13px rgba($color: #b0b6d8, $alpha: 0.16);
+                padding: 30px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .control-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .label {
+            width: 150px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #7b809e;
+        }
+
+        .control {
+            flex-grow: 1;
+
+            input {
+                width: 100%;
+                border-color: #cdd0dc;
+            }
+
+            select{
+                border-color: #cdd0dc;
+            }
+        }
+    }
+
+    #submit {
+        margin-left: auto;
+        display: flex;
+        background-color: #434CE7;
+        border-color: #434CE7;
+
+        &:hover {
+            background-color: darken($color: #434CE7, $amount: 10);
+            border-color: darken($color: #434CE7, $amount: 10);
+        }
+    }
+
+    .layout-wrap {
+        display: none;
+
+        .layout {
+
+            &-title {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .cache-time,
+    .cache-control,
+    .shortcode {
+        display: flex;
+        align-items: center;
+    }
+
+    .cache-time {
+        margin-left: 50px;
+
+        &.disabled {
+            opacity: 0.5;
+            cursor: not-allowed !important;
+            pointer-events: none;
+        }
+
+        .label {
+            max-width: max-content;
+        }
+
+        input {
+            width: 50px !important;
+            padding-right: 0;
+
+            margin-left: 16px;
+            margin-right: 8px;
+        }
+    }
+
+    #copyShortcode {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #434CE7;
+        border-color: #434CE7;
+        color: #fff;
+        margin-left: 8px;
+
+        &:hover {
+            background-color: darken($color: #434CE7, $amount: 10);
+            border-color: darken($color: #434CE7, $amount: 10);
+        }
+
+        svg {
+            height: 18px;
+            width: 18px;
+            margin-right: 4px;
+        }
+    }
+
+
+
+    // Tweak these to change the style of the toggle
+    $toggle-background-color-on: darken($color: #434CE7, $amount: 10);
+    $toggle-background-color-off: #c4c7d8;
+    $toggle-control-color: white;
+    $toggle-width: 50px;
+    $toggle-height: 25px;
+    $toggle-gutter: 3px;
+    $toggle-radius: 50%;
+    $toggle-control-speed: .15s;
+    $toggle-control-ease: ease-in;
+
+    // These are our computed variables
+    // change at your own risk.
+    $toggle-radius: $toggle-height / 2;
+    $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+
+    .toggle-control {
+        display: block;
+        position: relative;
+        height: $toggle-height;
+        width: $toggle-width;
+        cursor: pointer;
+        font-size: 22px;
+        user-select: none;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        input:checked~.switch {
+            background-color: $toggle-background-color-on;
+
+            &:after {
+                left: $toggle-width - $toggle-control-size - $toggle-gutter;
+            }
+        }
+
+        .switch {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: $toggle-height;
+            width: $toggle-width;
+            border-radius: $toggle-radius;
+            background-color: $toggle-background-color-off;
+            transition: background-color $toggle-control-speed $toggle-control-ease;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: $toggle-gutter;
+                top: $toggle-gutter;
+                width: $toggle-control-size;
+                height: $toggle-control-size;
+                border-radius: $toggle-radius;
+                background: $toggle-control-color;
+                transition: left $toggle-control-speed $toggle-control-ease;
+            }
+        }
+    }
+}

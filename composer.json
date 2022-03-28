@@ -1,0 +1,22 @@
+{
+    "name": "sabbir/nfl-wp",
+    "description": "A WordPress plugin to list NFL teams by multiple criteria ",
+    "require-dev": {
+        "symfony/var-dumper": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sabbir\\NflWp\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sabbir Hasan",
+            "email": "sabbirshouvo@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "lib"
+    },
+    "require": {}
+}
