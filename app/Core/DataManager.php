@@ -65,14 +65,21 @@ class DataManager {
     public function get_team_list_by_division() {
         if ($this->data) {
             $teams = $this->get_team_list();
-            $groups = [];
+
+            // Skeleton data structure
+            $groups = [
+                'north' => [],
+                'east' => [],
+                'south' => [],
+                'west' => [],
+            ];
             if ($teams) {
                 foreach ($teams as $team) {
                     $division = Utilities::slugify($team->division);
                     $groups[$division][] = $team;
                 }
             }
-            Utilities::dd($groups);
+            // Utilities::dd($groups);
             return $groups;
         }
     }
@@ -80,15 +87,30 @@ class DataManager {
     public function get_team_by_conference() {
         if ($this->data) {
             $teams = $this->get_team_list();
-            $groups = [];
+
+            // Skeleton data structure
+            $groups = [
+                'AFC' => [
+                    'north' => [],
+                    'east' => [],
+                    'south' => [],
+                    'west' => [],
+                ],
+                'NFC' => [
+                    'north' => [],
+                    'east' => [],
+                    'south' => [],
+                    'west' => [],
+                ],
+            ];
             if ($teams) {
                 foreach ($teams as $team) {
                     $initial = Utilities::getInitials($team->conference);
-                    // $division = Utilities::slugify($team->division);
-                    $groups[$initial][] = $team;
+                    $division = Utilities::slugify($team->division);
+                    $groups[$initial][$division][] = $team;
                 }
             }
-            Utilities::dd($groups);
+            // Utilities::dd($groups);
             return $groups;
         }
     }

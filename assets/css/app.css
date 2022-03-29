@@ -1,1 +1,103 @@
-/* No CSS *//*# sourceMappingURL=app.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+.nfl-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  row-gap: 30px;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
+}
+
+.nfl-style-2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nfl-style-2 .nfl-conference {
+  width: 100%;
+}
+
+.nfl-style-3 .nfl-conference {
+  width: 100%;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.nfl-style-3 .nfl-conference-teams {
+  gap: 10px;
+}
+
+.nfl-style-3 .nfl-division {
+  -webkit-box-shadow: 0 3px 14px rgba(1, 51, 104, 0.16);
+          box-shadow: 0 3px 14px rgba(1, 51, 104, 0.16);
+  background: #fff;
+  border: none;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.nfl-style-3 .nfl-division-title {
+  background: #013368;
+  color: #fff;
+}
+
+.nfl-conference {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: auto;
+  -webkit-box-shadow: 0 3px 14px rgba(1, 51, 104, 0.16);
+          box-shadow: 0 3px 14px rgba(1, 51, 104, 0.16);
+  background: #fff;
+}
+
+.nfl-conference-title {
+  font-size: 14px;
+  background: #013368;
+  padding: 10px 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nfl-conference-teams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nfl-division {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #e1e8ef;
+}
+
+.nfl-division-title {
+  font-weight: bold;
+  font-size: 13px;
+  padding: 8px 16px;
+  background: #e9f0f7;
+}
+
+.nfl-team {
+  font-size: 12px;
+  padding: 8px 16px;
+}
+
+.nfl-team:last-child {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=app.css.map */

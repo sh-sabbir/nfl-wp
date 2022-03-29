@@ -2,6 +2,8 @@
 
 namespace Sabbir\NflWp\Core;
 
+use Sabbir\NflWp\Utilities;
+
 // Exit if accessed directly
 if (!defined('ABSPATH')) exit;
 
@@ -26,6 +28,14 @@ class Shortcode {
             'style' => 1,
         ), $atts, 'nfl');
 
+        if ($atts['style'] == 4) {
+            wp_enqueue_style('nfl-datatable-style');
+        }
+        wp_enqueue_script('nfl-datatable-js');
+
+        wp_enqueue_style('nfl-frontend-style');
+        wp_enqueue_script('nfl-frontend-js');
+
         return $this->render_shortcode($atts['style']);
     }
 
@@ -40,17 +50,29 @@ class Shortcode {
             $output = $apiKey . ':' . $cacheTime;
             $dataManager = DataManager::instance();
             $apiData = $dataManager->get_api_data($apiKey, $cacheTime);
-           
-            $data = $apiData->get_team_by_conference();
 
-            // $output = print_r($data,true);
+            if ($style == 4) {
+                $data = $apiData->get_team_list();
+            } else {
+                $data = $apiData->get_team_by_conference();
+            }
 
-            var_export($data);
+            // Utilities::dd($data);
 
+            $output = $this->load_template($style, $data);
         } else {
             $output = 'A valid apiKey is required to show data';
         }
 
         return $output;
+    }
+
+    private function load_template($template, $data) {
+        ob_start();
+        $filename = NFLWP_DIR_PATH . 'templates/style-' . $template . '.php';
+        if (is_file($filename)) {
+            @include($filename);
+        }
+        return ob_get_clean();
     }
 }

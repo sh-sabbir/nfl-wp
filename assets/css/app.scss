@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.nfl- {
+
+    &container {
+        display: flex;
+        width: 100%;
+        row-gap: 30px;
+        column-gap: 16px;
+        flex-wrap: wrap;
+        font-family: 'Lato', sans-serif;
+    }
+
+    &style-2 {
+        flex-direction: column;
+    }
+
+    &style-2 & {
+        &conference {
+            width: 100%;
+        }
+    }
+
+    &style-3 & {
+        &conference {
+            width: 100%;
+            background: transparent;
+            box-shadow: none;
+
+            &-teams {
+                gap: 10px;
+            }
+        }
+
+        &division {
+            box-shadow: 0 3px 14px rgba($color: #013368, $alpha: 0.16);
+            background: #fff;
+            border: none;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        &division-title {
+            background: #013368;
+            color: #fff;
+        }
+    }
+
+    &conference {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: auto;
+        box-shadow: 0 3px 14px rgba($color: #013368, $alpha: 0.16);
+        background: #fff;
+
+        &-title {
+            font-size: 14px;
+            background: #013368;
+            padding: 10px 16px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        &-teams {
+            display: flex;
+        }
+    }
+
+    &division {
+        flex: 1;
+        border: 1px solid #e1e8ef;
+
+        &-title {
+            font-weight: bold;
+            font-size: 13px;
+            padding: 8px 16px;
+            background: #e9f0f7;
+        }
+    }
+
+    &team {
+        font-size: 12px;
+        padding: 8px 16px;
+
+        &:last-child {
+            box-shadow: none;
+        }
+    }
+}
