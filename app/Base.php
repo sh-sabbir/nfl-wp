@@ -36,10 +36,18 @@ class Base {
     }
 
     public function init() {
+
+        // Load Frontend Assets
         Core\AssetManager::init();
+
+        // Register All Ajax handles
         Core\AjaxHandler::init();
 
+        // Decalre Shortcodes
+        Core\Shortcode::instance();
+
         if (is_admin()) {
+            // Load Admin Dashboard
             Core\Dashboard::instance();
         }
     }

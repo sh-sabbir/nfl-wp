@@ -5,9 +5,6 @@
   "main": "Gruntfile.js",
   "author": "Sabbir Hasan",
   "scripts" : {
-    "start" : "grunt default" ,
-    "readme" : "grunt readme",
-    "i18n" : "grunt i18n",
     "autoload": "composer dump-autoload -o "
   },
   "devDependencies": {
