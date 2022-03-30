@@ -4,7 +4,7 @@
  * Plugin Name: Nfl WP
  * Plugin URI: https://github.com/sh-sabbir/nfl-wp
  * Description: A plugin for showing NFL team data in various format!
- * Version: 0.1.0
+ * Version: 1.0.0
  * Author: Sabbir Hasan <sabbirshouvo@gmail.com>
  * Author URI: https://iamsabbir.dev
  * Requires at least: 5.0
