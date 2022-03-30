@@ -49,7 +49,12 @@ class DataManager {
                 // return ;
             }
             $data = wp_remote_retrieve_body($response);
-            set_transient('nfl_api_data', $data, $cache * MINUTE_IN_SECONDS);
+
+            if ($cache > 0) {
+                set_transient('nfl_api_data', $data, $cache * MINUTE_IN_SECONDS);
+            } else {
+                delete_transient('nfl_api_data');
+            }
         }
 
         $data = json_decode($data);

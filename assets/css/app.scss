@@ -38,6 +38,19 @@
             border: none;
             border-radius: 2px;
             overflow: hidden;
+
+            @media screen and (max-width: 525px) {
+                flex-basis: calc((100% - 10px) / 2);
+
+                .nfl-team:nth-child(odd) {
+                    background-color: #f2f2f2;
+                }
+            }
+
+            @media screen and (max-width: 375px) {
+                flex-basis: 100%;
+                text-align: center;
+            }
         }
 
         &division-title {
@@ -53,6 +66,7 @@
         width: auto;
         box-shadow: 0 3px 14px rgba($color: #013368, $alpha: 0.16);
         background: #fff;
+        flex-grow: 1;
 
         &-title {
             font-size: 14px;
@@ -64,12 +78,26 @@
 
         &-teams {
             display: flex;
+            flex-wrap: wrap;
         }
     }
 
     &division {
         flex: 1;
         border: 1px solid #e1e8ef;
+
+        @media screen and (max-width: 525px) {
+            flex-basis: 50%;
+
+            .nfl-team:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            flex-basis: 100%;
+            text-align: center;
+        }
 
         &-title {
             font-weight: bold;
