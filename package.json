@@ -1,10 +1,10 @@
-
 {
   "name": "nfl-wp",
   "version": "0.1.0",
   "main": "Gruntfile.js",
   "author": "Sabbir Hasan",
-  "scripts" : {
+  "scripts": {
+    "zip": "git archive -o nfl-wp.zip HEAD && mv nfl-wp.zip ../",
     "autoload": "composer dump-autoload -o "
   },
   "devDependencies": {
