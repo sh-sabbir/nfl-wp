@@ -46,7 +46,6 @@ class Dashboard {
             'manage_options',
             'nfl-wp-settings',
             array($this, 'menuPage'),
-            // 'dashicons-tagcloud',
             NFLWP_ASSETS.'img/nfl-logo.svg',
             58.5
         );

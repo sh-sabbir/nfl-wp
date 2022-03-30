@@ -1,0 +1,11 @@
+#adminmenu #toplevel_page_nfl-wp-settings .wp-menu-image img {
+    padding-top: 4px !important;
+}
+
+#adminmenu #toplevel_page_nfl-wp-settings.current .wp-menu-image img {
+    opacity: 1;
+}
+
+#adminmenu #toplevel_page_nfl-wp-settings.current a.menu-top {
+    background: #154072 !important;
+}

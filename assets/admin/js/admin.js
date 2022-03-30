@@ -33,6 +33,7 @@ function initializeNBA() {
 	let handleApiForm = (event) => {
 		event.preventDefault();
 
+		let nonce = document.getElementById("nflNonce").value;
 		let apiKey = document.getElementById("apiKey").value;
 		let cacheEnabled = isCache.checked;
 		let cacheTime = document.getElementById("cacheTime").value;
@@ -49,6 +50,7 @@ function initializeNBA() {
 
 		let data = {
 			action: "nflwp_settings_save",
+			nonce: nonce,
 			settings: JSON.stringify(settings),
 		};
 

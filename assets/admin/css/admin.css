@@ -6,18 +6,6 @@
   font-size: 12px;
 }
 
-.toplevel_page_nfl-wp-settings #toplevel_page_nfl-wp-settings .wp-menu-image img {
-  padding-top: 4px !important;
-}
-
-.toplevel_page_nfl-wp-settings #toplevel_page_nfl-wp-settings.current .wp-menu-image img {
-  opacity: 1;
-}
-
-.toplevel_page_nfl-wp-settings #toplevel_page_nfl-wp-settings.current a.menu-top {
-  background: #154072 !important;
-}
-
 .toplevel_page_nfl-wp-settings #nfl-wp-wrap {
   padding: 40px;
 }

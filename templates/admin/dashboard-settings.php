@@ -57,9 +57,10 @@
                 </div>
                 <div class="control">
                     <select name="designSelector" id="designSelector">
-                        <option value="1"><?php _e('Horizontal List', 'nfl-wp'); ?></option>
-                        <option value="2"><?php _e('Vertical List', 'nfl-wp'); ?></option>
-                        <option value="3"><?php _e('Table with Filter and Sorting', 'nfl-wp'); ?></option>
+                        <option value="1"><?php _e('Horizontal List [Conference]', 'nfl-wp'); ?></option>
+                        <option value="2"><?php _e('Vertical List [Conference]', 'nfl-wp'); ?></option>
+                        <option value="3"><?php _e('Horizontal List [Groups]', 'nfl-wp'); ?></option>
+                        <option value="4"><?php _e('Table with Search and Sorting', 'nfl-wp'); ?></option>
                     </select>
                 </div>
             </div>
@@ -88,21 +89,28 @@
             <div id="layout-1" class="layout-wrap" style="display: block;">
                 <div class="layout-title"><?php _e('Horizontal List', 'nfl-wp'); ?></div>
                 <div class="layout">
-                    <img src="<?php echo NFLWP_ASSETS . 'img/layout_1.svg'; ?>" alt="layout-1">
+                    <img src="<?php echo NFLWP_ASSETS . 'img/layout_1.png'; ?>" alt="layout-1">
                 </div>
             </div>
 
             <div id="layout-2" class="layout-wrap">
                 <div class="layout-title"><?php _e('Vertical List', 'nfl-wp'); ?></div>
                 <div class="layout">
-                    <img src="<?php echo NFLWP_ASSETS . 'img/layout_2.svg'; ?>" alt="layout-2">
+                    <img src="<?php echo NFLWP_ASSETS . 'img/layout_2.png'; ?>" alt="layout-2">
                 </div>
             </div>
 
             <div id="layout-3" class="layout-wrap">
                 <div class="layout-title"><?php _e('Table with Filter and Sorting', 'nfl-wp'); ?></div>
                 <div class="layout">
-                    <img src="<?php echo NFLWP_ASSETS . 'img/layout_3.svg'; ?>" alt="layout-3">
+                    <img src="<?php echo NFLWP_ASSETS . 'img/layout_3.png'; ?>" alt="layout-3">
+                </div>
+            </div>
+
+            <div id="layout-4" class="layout-wrap">
+                <div class="layout-title"><?php _e('Table with Filter and Sorting', 'nfl-wp'); ?></div>
+                <div class="layout">
+                    <img src="<?php echo NFLWP_ASSETS . 'img/layout_4.png'; ?>" alt="layout-3">
                 </div>
             </div>
         </div>
