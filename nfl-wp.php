@@ -25,7 +25,7 @@ require_once dirname(__FILE__) . "/lib/autoload.php";
 /**
  * Define Plugin Constants
  */
-define('NFLWP_VERSION', '3.5.0');
+define('NFLWP_VERSION', '1.0.0');
 define('NFLWP__FILE__', __FILE__);
 define('NFLWP_DIR_PATH', plugin_dir_path(NFLWP__FILE__));
 define('NFLWP_DIR_URL', plugin_dir_url(NFLWP__FILE__));

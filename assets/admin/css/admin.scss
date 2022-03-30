@@ -79,10 +79,24 @@
                 border-color: #cdd0dc;
             }
 
-            select{
+            select {
                 border-color: #cdd0dc;
             }
         }
+    }
+
+    #tooltip-copied {
+        display: none;
+        position: absolute;
+        left: -103%;
+        line-height: 1;
+        padding: 5px 8px;
+        background: #434ce6;
+        color: #fff !important;
+        border-radius: 4px;
+        font-size: 12px;
+        pointer-events: none;
+        transition: all 300px ease-in-out;
     }
 
     #submit {
@@ -151,6 +165,7 @@
         border-color: #434CE7;
         color: #fff;
         margin-left: 8px;
+        position: relative;
 
         &:hover {
             background-color: darken($color: #434CE7, $amount: 10);

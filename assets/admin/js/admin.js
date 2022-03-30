@@ -9,14 +9,23 @@ function initializeNBA() {
 	const isCache = document.getElementById("isCache");
 	const copyButton = document.getElementById("copyShortcode");
 	const shortcodeText = document.getElementById("shortcode");
+	const tooltipCopy = document.getElementById("tooltip-copied");
 
 	let handleCopy = (event) => {
 		shortcodeText.select();
 		document.execCommand("copy");
-		
+
 		const selection = window.getSelection();
 		selection.removeAllRanges();
 		shortcodeText.blur();
+
+		show(tooltipCopy);
+		copyButton.classList.add("disabled");
+
+		setTimeout(function () {
+			hide(tooltipCopy);
+			copyButton.classList.remove("disabled");
+		}, 1000); //wait 2 seconds
 	};
 
 	let handleLayoutChange = (event) => {

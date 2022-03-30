@@ -1,5 +1,5 @@
 window.onload = (event) => {
-	console.log("hola");
+	// console.log("hola");
 
 	let nflTables = document.querySelectorAll("[data-nfl-style-4]");
 

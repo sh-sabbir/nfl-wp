@@ -6,6 +6,18 @@
   font-size: 12px;
 }
 
+.toplevel_page_nfl-wp-settings #toplevel_page_nfl-wp-settings .wp-menu-image img {
+  padding-top: 4px !important;
+}
+
+.toplevel_page_nfl-wp-settings #toplevel_page_nfl-wp-settings.current .wp-menu-image img {
+  opacity: 1;
+}
+
+.toplevel_page_nfl-wp-settings #toplevel_page_nfl-wp-settings.current a.menu-top {
+  background: #154072 !important;
+}
+
 .toplevel_page_nfl-wp-settings #nfl-wp-wrap {
   padding: 40px;
 }
@@ -72,6 +84,21 @@
 
 .toplevel_page_nfl-wp-settings .control-group .control select {
   border-color: #cdd0dc;
+}
+
+.toplevel_page_nfl-wp-settings #tooltip-copied {
+  display: none;
+  position: absolute;
+  left: -103%;
+  line-height: 1;
+  padding: 5px 8px;
+  background: #434ce6;
+  color: #fff !important;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  -webkit-transition: all 300px ease-in-out;
+  transition: all 300px ease-in-out;
 }
 
 .toplevel_page_nfl-wp-settings #submit {
@@ -150,6 +177,7 @@
   border-color: #434CE7;
   color: #fff;
   margin-left: 8px;
+  position: relative;
 }
 
 .toplevel_page_nfl-wp-settings #copyShortcode:hover {

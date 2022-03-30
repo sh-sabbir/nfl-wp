@@ -72,6 +72,7 @@
                 <div class="control shortcode">
                     <input type="text" name="shortcode" id="shortcode" value="[nfl layout=1]" readonly>
                     <div id="copyShortcode" class="button button-primary">
+                        <div id="tooltip-copied">Copied!</div>
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <rect x="8" y="8" width="12" height="12" rx="2"></rect>
