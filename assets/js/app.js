@@ -1,12 +1,21 @@
 window.onload = (event) => {
 	console.log("hola");
 
-	let nflTable = document.querySelector("[nfl-style-4]");
+	let nflTables = document.querySelectorAll("[data-nfl-style-4]");
 
-	new simpleDatatables.DataTable('#basic', {
-		searchable: true,
-		fixedHeight: false,
-        paging: false,
-		fixedHeight: true,
+	nflTables.forEach(function (nflTable) {
+		new simpleDatatables.DataTable(nflTable, {
+			searchable: true,
+			fixedHeight: false,
+			paging: false,
+			fixedHeight: true,
+			filters: {
+				Division: ["East", "West", "North", "South"],
+				Conference: [
+					"National Football Conference",
+					"American Football Conference",
+				],
+			},
+		});
 	});
 };

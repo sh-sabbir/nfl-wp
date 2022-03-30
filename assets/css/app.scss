@@ -87,4 +87,93 @@
             box-shadow: none;
         }
     }
+
+    &style-4 {
+        box-shadow: 0 3px 14px rgba($color: #013368, $alpha: 0.16);
+        background: #fff;
+        border: none;
+        border-radius: 2px;
+        overflow: hidden;
+
+
+        ::-webkit-input-placeholder {
+            /* Edge */
+            color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+
+        ::placeholder {
+            color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+
+        .dataTable-top {
+            padding: 16px;
+            background: #013366;
+        }
+
+        .dataTable-search {
+            width: 100%;
+
+            .dataTable-input {
+                background: lighten($color: #013365, $amount: 5);
+                border: none;
+                font-size: 14px;
+                padding: 12px 16px;
+                border-radius: 6px;
+                color: #fff;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        table {
+            margin: 0px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: none;
+            font-size: 14px;
+
+            th,
+            td {
+                text-align: left;
+                border: none;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            thead {
+                border: none;
+                background: #013366;
+                color: #fff;
+            }
+        }
+
+        .dataTable-table>thead>tr>th,
+        .dataTable-table>tbody>tr>td {
+            border: none;
+            padding: 12px 16px;
+        }
+
+        .dataTable-bottom {
+            display: none;
+        }
+
+        .dataTable-sorter::before {
+            border-top-color: #fff;
+        }
+
+        .dataTable-sorter::after {
+            border-bottom-color: #fff;
+        }
+    }
+
+
 }
