@@ -51,17 +51,18 @@ class Shortcode {
             $dataManager = DataManager::instance();
             $apiData = $dataManager->get_api_data($apiKey, $cacheTime);
 
-            if ($style == 4) {
-                $data = $apiData->get_team_list();
+            if ($apiData->getData()) {
+                if ($style == 4) {
+                    $data = $apiData->get_team_list();
+                } else {
+                    $data = $apiData->get_team_by_conference();
+                }
+                $output = $this->load_template($style, $data);
             } else {
-                $data = $apiData->get_team_by_conference();
+                $output = '<p>A valid apiKey is required to show data</p>';
             }
-
-            // Utilities::dd($data);
-
-            $output = $this->load_template($style, $data);
         } else {
-            $output = 'A valid apiKey is required to show data';
+            $output = '<p>A valid apiKey is required to show data</p>';
         }
 
         return $output;

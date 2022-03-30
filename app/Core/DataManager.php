@@ -46,14 +46,23 @@ class DataManager {
             $response = wp_remote_get($api_url);
 
             if (200 !== wp_remote_retrieve_response_code($response)) {
-                return;
+                // return ;
             }
             $data = wp_remote_retrieve_body($response);
             set_transient('nfl_api_data', $data, $cache * MINUTE_IN_SECONDS);
         }
 
-        $this->data = json_decode($data);
+        $data = json_decode($data);
+
+        if (!property_exists($data->results, 'error')) {
+            $this->data = $data;
+        }
+
         return $this;
+    }
+
+    public function getData() {
+        return $this->data;
     }
 
     public function get_team_list() {
@@ -82,6 +91,8 @@ class DataManager {
             // Utilities::dd($groups);
             return $groups;
         }
+
+        return false;
     }
 
     public function get_team_by_conference() {
@@ -113,5 +124,7 @@ class DataManager {
             // Utilities::dd($groups);
             return $groups;
         }
+
+        return false;
     }
 }
